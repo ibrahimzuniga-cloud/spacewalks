@@ -1,10 +1,12 @@
 # https://data.nasa.gov/resource/eva.json (with modifications)
-data_f_file = './eva-data.json'
-data_t_file = './eva-data.csv'
+data_f_file = './eva_data.json'
+data_t_file = './eva_data.csv'
 g_file = 'cumulative_eva_graph.png'
 fieldnames <- c("EVA #", "Country", "Crew    ", "Vehicle", "Date", "Duration", "Purpose")
 
+#load libraries
 library(jsonlite)
+library(lubridate)
 
 j_l <- read_json(data_f_file)
 data=as.data.frame(j_l[[1]])
@@ -18,7 +20,6 @@ for( i in 2:374){
 ## Comment out this bit if you don't want the spreadsheet
 write.csv(data_t_file)
 
-library(lubridate)
 
 time <- c()
 date = Date()
