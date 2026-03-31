@@ -44,5 +44,6 @@ renv::restore()
 # - jsonlite    [* -> 2.0.0]
 # - lubridate   [* -> 1.9.5]
 
-
-
+#On the console
+# echo "renv/" >> .gitignore to add folder with dependencies to gitignore
+# just want the lock file, not the rest. 
